@@ -19,7 +19,7 @@ app.use(express.static(buildPath));
 
 sequelize.sync().then(() => console.log("db is ready"));
 
-+app.get('/*', function (req, res) {
+app.get('/*', function (req, res) {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
