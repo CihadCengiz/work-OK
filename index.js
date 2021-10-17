@@ -19,6 +19,10 @@ app.use(express.static(buildPath));
 
 sequelize.sync().then(() => console.log("db is ready"));
 
++app.get('/*', function (req, res) {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
+
 
 app.get("/jobs", async (req, res) => {
   const pageAsNumber = Number.parseInt(req.query.page);
