@@ -15,7 +15,7 @@ const PORT = process.env.PORT || 3001;
 
 app.use(cors());
 app.use(express.json());
-app.use(express.static(buildPath));
+// app.use(express.static(buildPath));
 // app.use('/static', express.static(buildPath));
 app.use(express.static(__dirname + '/client/build'));
 
