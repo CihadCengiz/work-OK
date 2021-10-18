@@ -16,13 +16,13 @@ const PORT = process.env.PORT || 3001;
 app.use(cors());
 app.use(express.json());
 app.use(express.static(buildPath));
-app.use('/static', express.static(buildPath));
+// app.use('/static', express.static(buildPath));
 
 sequelize.sync().then(() => console.log("db is ready"));
 
-app.get('/*', function (req, res) {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
+// app.get('/*', function (req, res) {
+//   res.sendFile(path.join(__dirname, 'build', 'index.html'));
+// });
 
 
 app.get("/jobs", async (req, res) => {
