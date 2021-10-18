@@ -16,6 +16,7 @@ const PORT = process.env.PORT || 3001;
 app.use(cors());
 app.use(express.json());
 app.use(express.static(buildPath));
+app.use('/static', express.static(buildPath));
 
 sequelize.sync().then(() => console.log("db is ready"));
 
