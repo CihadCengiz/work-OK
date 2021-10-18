@@ -17,12 +17,13 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static(buildPath));
 // app.use('/static', express.static(buildPath));
+app.use(express.static(__dirname + '/client/build'));
 
 sequelize.sync().then(() => console.log("db is ready"));
 
-app.get('/*', function (req, res) {
-  res.sendFile(path.join(__dirname, '/client/build', 'index.html'));
-});
+// app.get('/*', function (req, res) {
+//   res.sendFile(path.join(__dirname, '/client/build', 'index.html'));
+// });
 
 
 app.get("/jobs", async (req, res) => {
