@@ -1,1 +1,34 @@
-{}
+{
+    "name": "server",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "devStart": "nodemon index.js",
+      "start": "node index.js",
+      "heroku-postbuild": "cd client && npm install && npm run build"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "axios": "^0.21.1",
+      "cheerio": "*",
+      "cors": "^2.8.5",
+      "dotenv": "^10.0.0",
+      "express": "^4.17.1",
+      "express-promise-router": "^4.1.0",
+      "node-cron": "^3.0.0",
+      "nodemailer": "^6.6.3",
+      "pg": "^8.6.0",
+      "pg-format": "^1.0.4",
+      "pg-hstore": "^2.3.4",
+      "puppeteer": "^10.1.0",
+      "sequelize": "^6.6.5"
+    },
+    "devDependencies": {
+      "nodemon": "^2.0.7"
+    }
+  }
+  

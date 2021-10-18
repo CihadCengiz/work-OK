@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,700&display=swap');
+
+.splitted {
+    columns: 2 auto;
+    display: inline-block;
+}
+
+@media (min-width: 544px) {
+    h4 {font-size:1rem;}
+  }
+
+  @media (min-width: 768px) {  
+    h4 {font-size:1.5rem;} /*1rem = 16px*/
+  }
+
+  .checkbox-parent {
+      min-width: 130px;
+  }
+  
+html {
+  max-width: 100%;
+  overflow-x: unset;
+}
+
+body {
+      max-width: 100%;
+      overflow-x: unset;
+      height: 100%;
+    }
+
+.main-contact {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.footer{
+  max-width: 100%;
+  overflow: hidden;
+  justify-content: center;
+  text-align: center;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 10px;
+}
+
+
+
+
+
+  .accordion {
+      width: 100%;
+  }
+
+  .item {
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.12), 
+              1px 1px 10px rgba(0,0,0,0.12), 
+              1px 1px 1px rgba(0,0,0,0.12), 
+              0 1px 1px rgba(0,0,0,0.12);
+    background: transparent;
+    margin-top: 30px;
+    font-weight: lighter;
+  }
+
+  .title{
+      color: rgba(0, 0, 0, 0.808);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      padding:10px 20px 10px;
+  }
+
+  .content{
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0,1,0,1);
+    font-size: 1.3em;
+    padding-left: 20px;
+  }
+
+  .content.show{
+      height:auto;
+      max-height: 9999px;
+      transition: all 0.5s cubic-bezier(1,0,1,0)
+  }
+
+
+  .title:hover {
+    background-color: rgb(240, 240, 240);
+  }
+
+  .expand-image {
+    background-color:#F4B6B9;
+  }

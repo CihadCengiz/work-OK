@@ -8,7 +8,7 @@ var router = express.Router();
 var nodemailer = require('nodemailer');
 const creds = require('./contact/config');
 const path = require('path');
-const buildPath = path.join(__dirname, 'build');
+const buildPath = path.join(__dirname, '/client/build');
 require('dotenv').config()
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -21,7 +21,7 @@ app.use(express.static(buildPath));
 sequelize.sync().then(() => console.log("db is ready"));
 
 app.get('/*', function (req, res) {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+  res.sendFile(path.join(__dirname, '/client/build', 'index.html'));
 });
 
 
