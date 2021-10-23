@@ -21,14 +21,9 @@ app.use(express.static(buildPath));
 
 sequelize.sync().then(() => console.log("db is ready"));
 
-app.use('/static', express.static(path.join(__dirname, '/client/build//static')));
-app.get('*', function(req, res) {
-  res.sendFile('index.html', {root: path.join(__dirname, '/client/build/')});
+app.get('/*', function (req, res) {
+  res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
 });
-
-// app.get('*', function (req, res) {
-//   res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
-// });
 
 
 app.get("/jobs", async (req, res) => {
