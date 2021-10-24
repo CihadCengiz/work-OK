@@ -11,15 +11,11 @@ const path = require('path');
 const buildPath = path.join(__dirname, 'client', 'build');
 require('dotenv').config()
 const app = express();
-var serveStatic = require('serve-static')
 const PORT = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(express.json());
 app.use(express.static(buildPath));
-////////
-// app.use(serveStatic(path.join(__dirname, 'client/build')))
-// app.use('/static', express.static(path.join(__dirname, 'client/build')))
 
 sequelize.sync().then(() => console.log("db is ready"));
 
