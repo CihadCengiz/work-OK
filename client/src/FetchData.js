@@ -43,7 +43,7 @@ function FetchData() {
   //   });
   // }, []);
   useEffect(() => {
-    axios.get(`http://localhost:3001/jobs?page=${page}`).then((items) => {
+    axios.get(`http://localhost:3001/api/jobs?page=${page}`).then((items) => {
       console.log(items.data.content);
       setJobs(items.data.content);
       setTotalPages(items.data.totalPages)
