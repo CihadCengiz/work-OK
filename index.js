@@ -8,19 +8,23 @@ var router = express.Router();
 var nodemailer = require('nodemailer');
 const creds = require('./contact/config');
 const path = require('path');
-const buildPath = path.join(__dirname, 'build');
+const buildPath = path.join(__dirname, 'client', 'build');
 require('dotenv').config()
 const app = express();
-const PORT = process.env.PORT || 3001;
+var serveStatic = require('serve-static')
+const PORT = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(express.json());
 app.use(express.static(buildPath));
+////////
+// app.use(serveStatic(path.join(__dirname, 'client/build')))
+// app.use('/static', express.static(path.join(__dirname, 'client/build')))
 
 sequelize.sync().then(() => console.log("db is ready"));
 
 
-app.get("/jobs", async (req, res) => {
+app.get("/api/jobs", async (req, res) => {
   const pageAsNumber = Number.parseInt(req.query.page);
   const sizeAsNumber = Number.parseInt(req.query.size);
   const getLocation = req.query.location;
@@ -60,7 +64,7 @@ app.get("/jobs", async (req, res) => {
   currentDegree=[]
 });
 
-app.get("/volunteer", async (req, res) => {
+app.get("/api/volunteer", async (req, res) => {
   const pageAsNumber = Number.parseInt(req.query.page);
   const sizeAsNumber = Number.parseInt(req.query.size);
   const getLocation = req.query.location;
@@ -93,7 +97,7 @@ app.get("/volunteer", async (req, res) => {
   });
 });
 
-app.get("/dates", async (req, res) => {
+app.get("/api/dates", async (req, res) => {
   const Op = sequelize.Sequelize.Op;
 
   const jobs = await Jobs.findAndCountAll({
@@ -151,6 +155,10 @@ transporter.sendMail(mail, (err, data) => {
   }
 })
 })
+
+app.get('/*', function (req, res) {
+  res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+});
 
 app.use('/', router)
 
