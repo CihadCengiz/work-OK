@@ -3,7 +3,6 @@ import { Nav, Container, Row, Col } from "react-bootstrap";
 import "./App.css";
 
 var style = {
-  // backgroundColor: "#F8F8F8",
   borderTop: "1px solid #E7E7E7",
   textAlign: "center",
   position: "relative",
@@ -11,7 +10,7 @@ var style = {
   bottom: "0",
   height: "60px",
   width: "100%",
-  paddingTop: "10px"
+  paddingTop: "10px",
 };
 
 var phantom = {
@@ -22,7 +21,7 @@ var phantom = {
 };
 
 const brandStyle = {
-  color: "black",
+  color: "hsl(357, 57%, 63%)",
   fontSize: "1em",
   fontFamily: "Raleway",
 };

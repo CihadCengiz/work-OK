@@ -16,30 +16,20 @@ export default function Home() {
   const { volunteers } = useFetchVol(params, page, size, location);
 
   return (
-    <Container className="my-4">
-      <Row>
-        <Col>
-          <h4 className="text-muted font-weight-light">Internship offers</h4>
+    <Container fluid className="my-4">
+        <div className="d-flex justify-content-between">
+          <h4 className="text-muted hometitle d-sm-block pt-1">Internship offers</h4>
+          <Link to="/internships" className="link d-none d-sm-block">View More</Link>
+        </div>
           {jobs.map((job) => {
             return <Job key={job.id} job={job} />;
           })}
-          <Link to="/internships">View More</Link>
-        </Col>
-        <Col>
-          <h4 className="text-muted font-weight-light">
-            Volunteer Opportunities
-          </h4>
-          {volunteers.map((volunteer) => {
-            return <Volunteer key={volunteer.id} volunteer={volunteer} />;
-          })}
-        </Col>
         <div className="d-flex justify-content-center">
           {loading && (
             <ClipLoader color={"#36D7B7"} loading={loading} size={100} />
           )}
           {error && <h1>Error...</h1>}
         </div>
-      </Row>
     </Container>
   );
 }

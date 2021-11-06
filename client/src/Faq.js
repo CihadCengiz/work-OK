@@ -48,7 +48,7 @@ export default function Faq() {
   return (
     <Container>
       <Row className="pb-5 justify-content-center">
-        <h1 className="d-flex justify-content-center mt-5 pt-5">
+        <h1 className="d-flex justify-content-center mt-5 pt-5 contact">
           Get to know us
         </h1>
         <h2 className="justify-content-center mt-4 text-muted font-weight-light text-center">
@@ -61,17 +61,17 @@ export default function Faq() {
         />
       </Row>
       <Row>
-        <h2 className="d-flex justify-content-center">
+        <h2 className="d-flex justify-content-center text-muted">
           Frequently Asked Questions
         </h2>
           <div className="accordion">
             {data.map((item, i) => (
               <Col className="item text-muted" key={i}>
                 <div className="title font-weight-light" onClick={() => toggle(i)}>
-                <h2>{item.question}</h2>
+                <h2 className="contact">{item.question}</h2>
                 <Image className="expand-image" src={selected === i ? expandUp : expandDown} alt="expand-icon" roundedCircle></Image>
                   </div>
-                <div className={selected === i ? "content show" : "content"}>{item.answer}</div>
+                <div className={selected === i ? "content show cntn-color" : "content cntn-color"}>{item.answer}</div>
               </Col>
             ))}
           </div>

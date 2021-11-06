@@ -18,8 +18,6 @@ function Navigation() {
 
   return (
     <Navbar
-      bg="secondary"
-      variant="dark"
       sticky="top"
       expand='lg'
       collapseOnSelect 
