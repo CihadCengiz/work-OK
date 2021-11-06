@@ -9,12 +9,12 @@ export default function Job({ job }) {
       <Card.Body>
         <Row>
           <Col xs={12} sm={12} md={8} lg={9}>
-            <Card.Title className="mb-3 text-primary d-flex align-items-center">
+            <Card.Title className="mb-3 jobtitle d-flex align-items-center">
               {job.title}
             </Card.Title>
           </Col>
           <Col xs={12} sm={12} md={4} lg={3} className="d-flex flex-md-row-reverse flex-sm-row align-items-center">
-            <Badge className="mb-3" bg="secondary">{job.location}</Badge>
+            <Badge className="mb-3 custom-badge">{job.location}</Badge>
           </Col>
         </Row>
 
@@ -31,7 +31,7 @@ export default function Job({ job }) {
           <div>
             <Card.Title className="">
               <p className="text-muted font-weight-light">{job.fofstd}</p>
-              <h6 className="text-primary">{job.company} </h6>
+              <h6 className="jobcompany">{job.company} </h6>
             </Card.Title>
           </div>
         </div>
@@ -53,8 +53,7 @@ export default function Job({ job }) {
         </Col>
         <Col>
           <Button
-            className="d-none d-md-block"
-            variant="primary"
+            className="d-none d-md-block custom-btn"
             size="lg"
             href={job.redirect}
             >

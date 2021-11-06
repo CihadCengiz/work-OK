@@ -44,10 +44,6 @@ body {
   padding-bottom: 10px;
 }
 
-
-
-
-
   .accordion {
       width: 100%;
   }
@@ -92,4 +88,54 @@ body {
 
   .expand-image {
     background-color:#F4B6B9;
+  }
+  /* 357, 70%, 80% */
+  .link{
+    color: hsl(357, 57%, 63%);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.25rem;
+  }
+  .link:hover {
+    color:hsl(357, 57%, 80%);
+  }
+
+  .navbar-custom {
+    background-color: hsl(357, 57%, 63%);
+  }
+
+  .hometitle{
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+
+  .jobtitle{
+    color: hsl(357, 57%, 63%);
+    font-weight: 700;
+  }
+
+  .jobcompany {
+    color: hsl(357, 57%, 63%);
+    font-weight: 700;
+  }
+
+  .custom-badge{
+    background-color: hsl(357, 57%, 63%);
+  }
+
+  .custom-btn{
+    background-color: hsl(357, 57%, 63%);
+    border: none;
+    color: white;
+  }
+  .custom-btn:hover {
+    background-color: hsl(357, 57%, 55%);
+  }
+  .contact {
+    color: hsl(357, 57%, 55%);
+    font-weight: 700;
+  }
+
+  .cntn-color {
+    font-weight: 700;
   }
