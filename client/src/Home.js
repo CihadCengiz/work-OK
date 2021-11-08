@@ -1,11 +1,10 @@
 import React, { useState } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import Job from "./Job";
-import Volunteer from "./Volunteer";
 import useFetchJobs from "./useFetchJobs";
-import useFetchVol from "./useFetchVol";
 import { Link } from "react-router-dom";
 import ClipLoader from "react-spinners/ClipLoader";
+import "./App.css";
 
 export default function Home() {
   const [params] = useState({});
@@ -13,7 +12,6 @@ export default function Home() {
   const size = 5;
   const [location] = useState([]);
   const { jobs, loading, error } = useFetchJobs(params, page, size, location);
-  const { volunteers } = useFetchVol(params, page, size, location);
 
   return (
     <Container fluid className="my-4">
