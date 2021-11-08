@@ -1,32 +1,51 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,700&display=swap");
 
 .splitted {
-    columns: 2 auto;
-    display: inline-block;
+  columns: 2 auto;
+  display: inline-block;
 }
 
 @media (min-width: 544px) {
-    h4 {font-size:1rem;}
+  h4 {
+    font-size: 1rem;
   }
+}
 
-  @media (min-width: 768px) {  
-    h4 {font-size:1.5rem;} /*1rem = 16px*/
-  }
+@media (min-width: 768px) {
+  h4 {
+    font-size: 1.5rem;
+  } /*1rem = 16px*/
+}
 
-  .checkbox-parent {
-      min-width: 130px;
-  }
-  
+.checkbox-parent {
+  min-width: 130px;
+}
+
 html {
   max-width: 100%;
   overflow-x: unset;
 }
 
 body {
-      max-width: 100%;
-      overflow-x: unset;
-      height: 100%;
-    }
+  max-width: 100%;
+  overflow-x: unset;
+  height: 100%;
+  background-color: #f8f9fa;
+}
+
+body.dark-mode {
+  background-color: #333;
+  color: #f8f9fa;
+}
+
+.container-custom {
+  background-color: #f8f9fa;
+}
+
+.container-custom.dark-mode {
+  background-color: #333;
+}
+
 
 .main-contact {
   display: flex;
@@ -34,7 +53,7 @@ body {
   flex-direction: column;
 }
 
-.footer{
+.footer {
   max-width: 100%;
   overflow: hidden;
   justify-content: center;
@@ -44,98 +63,96 @@ body {
   padding-bottom: 10px;
 }
 
-  .accordion {
-      width: 100%;
-  }
+.accordion {
+  width: 100%;
+}
 
-  .item {
-    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.12), 
-              1px 1px 10px rgba(0,0,0,0.12), 
-              1px 1px 1px rgba(0,0,0,0.12), 
-              0 1px 1px rgba(0,0,0,0.12);
-    background: transparent;
-    margin-top: 30px;
-    font-weight: lighter;
-  }
+.item {
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.12),
+    1px 1px 10px rgba(0, 0, 0, 0.12), 1px 1px 1px rgba(0, 0, 0, 0.12),
+    0 1px 1px rgba(0, 0, 0, 0.12);
+  background: transparent;
+  margin-top: 30px;
+  font-weight: lighter;
+}
 
-  .title{
-      color: rgba(0, 0, 0, 0.808);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      cursor: pointer;
-      padding:10px 20px 10px;
-  }
+.title {
+  color: rgba(0, 0, 0, 0.808);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px 20px 10px;
+}
 
-  .content{
-    max-height: 0;
-    overflow: hidden;
-    transition: all 0.5s cubic-bezier(0,1,0,1);
-    font-size: 1.3em;
-    padding-left: 20px;
-  }
+.content {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0, 1, 0, 1);
+  font-size: 1.3em;
+  padding-left: 20px;
+}
 
-  .content.show{
-      height:auto;
-      max-height: 9999px;
-      transition: all 0.5s cubic-bezier(1,0,1,0)
-  }
+.content.show {
+  height: auto;
+  max-height: 9999px;
+  transition: all 0.5s cubic-bezier(1, 0, 1, 0);
+}
 
+.title:hover {
+  background-color: rgb(240, 240, 240);
+}
 
-  .title:hover {
-    background-color: rgb(240, 240, 240);
-  }
+.expand-image {
+  background-color: #f4b6b9;
+}
+/* 357, 70%, 80% */
+.link {
+  color: hsl(357, 57%, 63%);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+.link:hover {
+  color: hsl(357, 57%, 80%);
+}
 
-  .expand-image {
-    background-color:#F4B6B9;
-  }
-  /* 357, 70%, 80% */
-  .link{
-    color: hsl(357, 57%, 63%);
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 1.25rem;
-  }
-  .link:hover {
-    color:hsl(357, 57%, 80%);
-  }
+.navbar-custom {
+  background-color: hsl(357, 57%, 63%);
+}
 
-  .navbar-custom {
-    background-color: hsl(357, 57%, 63%);
-  }
+.hometitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
 
-  .hometitle{
-    font-size: 1.25rem;
-    font-weight: 700;
-  }
+.jobtitle {
+  color: hsl(357, 57%, 63%);
+  font-weight: 700;
+}
 
-  .jobtitle{
-    color: hsl(357, 57%, 63%);
-    font-weight: 700;
-  }
+.jobcompany {
+  color: hsl(357, 57%, 63%);
+  font-weight: 700;
+}
 
-  .jobcompany {
-    color: hsl(357, 57%, 63%);
-    font-weight: 700;
-  }
+.custom-badge {
+  background-color: hsl(357, 57%, 63%);
+}
 
-  .custom-badge{
-    background-color: hsl(357, 57%, 63%);
-  }
+.custom-btn {
+  background-color: hsl(357, 57%, 63%);
+  border: none;
+  color: white;
+}
+.custom-btn:hover {
+  background-color: hsl(357, 57%, 55%);
+}
+.contact {
+  color: hsl(357, 57%, 55%);
+  font-weight: 700;
+}
 
-  .custom-btn{
-    background-color: hsl(357, 57%, 63%);
-    border: none;
-    color: white;
-  }
-  .custom-btn:hover {
-    background-color: hsl(357, 57%, 55%);
-  }
-  .contact {
-    color: hsl(357, 57%, 55%);
-    font-weight: 700;
-  }
-
-  .cntn-color {
-    font-weight: 700;
-  }
+.cntn-color {
+  font-weight: 700;
+}

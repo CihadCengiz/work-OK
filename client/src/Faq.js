@@ -4,6 +4,8 @@ import bg from "./bg.svg";
 import styled from "styled-components";
 import expandDown from "./assets/expand-down.png";
 import expandUp from "./assets/expand-up.png";
+// import useClickOutside from "./useClickOutside";
+import "./App.css"
 
 const StyledImg = styled.img`
   width: 90%;
@@ -35,7 +37,14 @@ const data = [
 
 export default function Faq() {
   const [selected, setSelected] = useState(null)
+  // const modalRef = useRef()
 
+  //Buggy - To be fixed
+
+  // useClickOutside(modalRef, () => {
+  //   if (selected) setSelected(null)
+  // })
+  
   const toggle = i => {
     if(selected === i) {
       return setSelected(null)
@@ -44,6 +53,7 @@ export default function Faq() {
     
     setSelected(i)
   }
+
 
   return (
     <Container>
@@ -66,12 +76,14 @@ export default function Faq() {
         </h2>
           <div className="accordion">
             {data.map((item, i) => (
-              <Col className="item text-muted" key={i}>
+              <Col className="item text-muted" key={i} >
                 <div className="title font-weight-light" onClick={() => toggle(i)}>
                 <h2 className="contact">{item.question}</h2>
                 <Image className="expand-image" src={selected === i ? expandUp : expandDown} alt="expand-icon" roundedCircle></Image>
                   </div>
-                <div className={selected === i ? "content show cntn-color" : "content cntn-color"}>{item.answer}</div>
+                <div className={selected === i ? "content show cntn-color" : "content cntn-color" }>{item.answer}</div>
+                {/* Buggy - To be fixed
+                <div ref={modalRef} className={selected === i ? "content show cntn-color" : "content cntn-color" }>{item.answer}</div> */}
               </Col>
             ))}
           </div>

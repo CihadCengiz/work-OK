@@ -5,6 +5,7 @@ import {BASE_API_URL} from './BASE_API'
 import "./App.css";
 import contactsvg from "./character.svg"
 import styled from "styled-components";
+import "./App.css"
 
 
 const StyledImg = styled.img`

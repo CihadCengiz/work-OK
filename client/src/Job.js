@@ -2,10 +2,12 @@ import React from "react";
 import { Card, Row, Col } from "react-bootstrap";
 import Badge from "react-bootstrap/Badge";
 import Button from "react-bootstrap/Button";
+import "./App.css"
 
 export default function Job({ job }) {
+
   return (
-    <Card className="mb-3">
+    <Card className="mb-3 container-custom">
       <Card.Body>
         <Row>
           <Col xs={12} sm={12} md={8} lg={9}>
