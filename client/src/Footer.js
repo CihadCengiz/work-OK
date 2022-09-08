@@ -37,7 +37,7 @@ function Footer() {
             className="d-flex justify-content-between align-items-center"
           >
             <Nav.Link as={Link} eventKey="0" style={brandStyle} to="/">
-              <b>work | OK Copyright © 2021</b>
+              <b>work | OK Copyright © 2022</b>
             </Nav.Link>
             <div className="d-flex">
               <Nav.Link as={Link} eventKey="1" style={brandStyle} to="/contact">

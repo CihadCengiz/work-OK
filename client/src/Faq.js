@@ -4,7 +4,6 @@ import bg from "./bg.svg";
 import styled from "styled-components";
 import expandDown from "./assets/expand-down.png";
 import expandUp from "./assets/expand-up.png";
-// import useClickOutside from "./useClickOutside";
 import "./App.css"
 
 const StyledImg = styled.img`
@@ -37,13 +36,6 @@ const data = [
 
 export default function Faq() {
   const [selected, setSelected] = useState(null)
-  // const modalRef = useRef()
-
-  //Buggy - To be fixed
-
-  // useClickOutside(modalRef, () => {
-  //   if (selected) setSelected(null)
-  // })
   
   const toggle = i => {
     if(selected === i) {
