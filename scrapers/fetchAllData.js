@@ -24,7 +24,7 @@ async function fetchAllData() {
   const duration = [];
   const deadline = [];
 
-  for (let j = 0; j < 2; j++) {
+  for (let j = 0; j < 50; j++) {
     await page.goto(`https://erasmusintern.org/traineeships?page=${j}`);
     console.log(j);
 
@@ -144,11 +144,8 @@ async function fetchAllData() {
 
   browser.close();
 
-  let CONNECTION_STRING =
-    'postgres://cylyavxjenxtjz:d64e6848f4cb21241971b614a0f636b400c83e71aef27a713433292a16e1b3db@ec2-63-32-248-14.eu-west-1.compute.amazonaws.com:5432/dd3r91cmp3ck41';
-
   const client = new Client({
-    connectionString: CONNECTION_STRING,
+    connectionString: process.env.DATABASE_URL,
     ssl: {
       rejectUnauthorized: false,
     },
@@ -215,7 +212,7 @@ async function globalFetch() {
   const dOpp = ["Check details."];
   // const deadline = ["Check details."];
 
-  for (let k = 1; k < 5; k++) {
+  for (let k = 1; k < 50; k++) {
     await page.goto(
       `http://globalplacement.com/en/search-internships/page:${k}`
     );
@@ -267,7 +264,7 @@ async function globalFetch() {
     console.log("page done");
   }
   async function getDates() {
-    const response = await fetch("http://localhost:3000/api/dates");
+    const response = await fetch("http://workokdeploy.herokuapp.com/api/dates");
     const data = await response.json();
     const dataObj = await Object.values(data);
     for (let i = 0; i < 10; i++) {
@@ -295,11 +292,9 @@ async function globalFetch() {
     postdate.push(dateArr[i]);
   }
 
-  let CONNECTION_STRING =
-    "postgres://cylyavxjenxtjz:d64e6848f4cb21241971b614a0f636b400c83e71aef27a713433292a16e1b3db@ec2-63-32-248-14.eu-west-1.compute.amazonaws.com:5432/dd3r91cmp3ck41";
 
   const client = new Client({
-    connectionString: CONNECTION_STRING,
+    connectionString: process.env.DATABASE_URL,
     ssl: {
       rejectUnauthorized: false,
     },
