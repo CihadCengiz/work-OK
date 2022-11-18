@@ -1,15 +1,15 @@
 import React from "react";
-import "./App.css";
-import Navigation from "./Navigation";
+import "./assets/App.css";
+import Navigation from "./components/Navigation";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Internships from "./Internships";
-import Faq from "./Faq";
-import Home from "./Home";
-import Contact from "./Contact";
-import Footer from "./Footer";
-import privacy from "./privacy";
-import ScrollToTop from "./ScrollToTop";
-import terms from "./terms";
+import Internships from "./components/Internships";
+import Faq from "./components/Faq";
+import Home from "./components/Home";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
+import privacy from "./components/privacy";
+import ScrollToTop from "./services/ScrollToTop";
+import terms from "./components/terms";
 
 function App() {
   return (

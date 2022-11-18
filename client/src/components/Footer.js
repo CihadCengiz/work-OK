@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Nav, Container, Row, Col } from "react-bootstrap";
-import "./App.css";
+import "../assets/App.css";
 
 var style = {
   borderTop: "1px solid #E7E7E7",

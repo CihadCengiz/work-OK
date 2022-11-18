@@ -1,10 +1,10 @@
 import React, {useState} from "react";
 import { Container, Row, Col, Image } from "react-bootstrap";
-import bg from "./bg.svg";
+import bg from "../assets/bg.svg";
 import styled from "styled-components";
-import expandDown from "./assets/expand-down.png";
-import expandUp from "./assets/expand-up.png";
-import "./App.css"
+import expandDown from "../assets/expand-down.png";
+import expandUp from "../assets/expand-up.png";
+import "../assets/App.css"
 
 const StyledImg = styled.img`
   width: 90%;

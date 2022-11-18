@@ -2,7 +2,7 @@ import React from "react";
 import { Card, Row, Col } from "react-bootstrap";
 import Badge from "react-bootstrap/Badge";
 import Button from "react-bootstrap/Button";
-import "./App.css"
+import "../assets/App.css"
 
 export default function Job({ job }) {
 

@@ -1,7 +1,7 @@
 const express = require("express");
 var cors = require("cors");
-const sequelize = require("./api/database/db");
-const Jobs = require("./api/model/Jobs");
+const sequelize = require("./database/db");
+const Jobs = require("./model/Jobs");
 var cron = require("node-cron");
 var router = express.Router();
 var nodemailer = require('nodemailer');
@@ -77,8 +77,12 @@ var transport = {
   host: 'smtp.gmail.com',
   port: 465,
   auth: {
+  type: 'OAuth2',
   user: creds.USER,
-  pass: creds.PASS
+  pass: creds.PASS,
+  clientId: creds.OAUTH_CLIENTID,
+  clientSecret: creds.OAUTH_CLIENT_SECRET,
+  refreshToken: creds.OAUTH_REFRESH_TOKEN
 }
 }
 
@@ -125,7 +129,7 @@ app.get('/*', function (req, res) {
 app.use('/', router)
 
 
-cron.schedule('* * * * *', () => globalFetch());
+// cron.schedule('* * * * *', () => globalFetch());
 
 app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`);
