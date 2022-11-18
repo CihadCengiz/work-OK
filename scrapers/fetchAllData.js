@@ -18,7 +18,7 @@ async function fetchAllData() {
   const jobDates = [];
   const jobLocation = [];
   const jobCompany = [];
-  const jobDegree = []; //+
+  const jobDegree = [];
   const dOpp = [];
   const fOfStd = [];
   const duration = [];
