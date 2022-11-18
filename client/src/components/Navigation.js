@@ -1,8 +1,7 @@
 import React from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
-import "./App.css";
+import "../assets/App.css";
 import { Link } from "react-router-dom";
-import DarkModeComponent from "./DarkModeComponent";
 
 function Navigation() {
   const navStyle = {
@@ -43,7 +42,6 @@ function Navigation() {
               <Nav>Contact us</Nav>
             </Nav.Link>
           </Nav>
-        <DarkModeComponent />
 
         </Navbar.Collapse>
         </Container>

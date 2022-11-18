@@ -1,11 +1,10 @@
 import React, {useState} from "react";
 import { Container, Row, Col, Image } from "react-bootstrap";
-import bg from "./bg.svg";
+import bg from "../assets/bg.svg";
 import styled from "styled-components";
-import expandDown from "./assets/expand-down.png";
-import expandUp from "./assets/expand-up.png";
-// import useClickOutside from "./useClickOutside";
-import "./App.css"
+import expandDown from "../assets/expand-down.png";
+import expandUp from "../assets/expand-up.png";
+import "../assets/App.css"
 
 const StyledImg = styled.img`
   width: 90%;
@@ -37,13 +36,6 @@ const data = [
 
 export default function Faq() {
   const [selected, setSelected] = useState(null)
-  // const modalRef = useRef()
-
-  //Buggy - To be fixed
-
-  // useClickOutside(modalRef, () => {
-  //   if (selected) setSelected(null)
-  // })
   
   const toggle = i => {
     if(selected === i) {

@@ -4,7 +4,7 @@ import Job from "./Job";
 import useFetchJobs from "./useFetchJobs";
 import { Link } from "react-router-dom";
 import ClipLoader from "react-spinners/ClipLoader";
-import "./App.css";
+import "../assets/App.css";
 
 export default function Home() {
   const [params] = useState({});

@@ -6,7 +6,7 @@ import SearchForm from "./SearchForm";
 import useFetchJobs from "./useFetchJobs";
 import CheckBox from "./CheckBox";
 import ClipLoader from "react-spinners/ClipLoader";
-import "./App.css"
+import "../assets/App.css"
 
 let checkedDegree = [];
 let checkedDOP = [];

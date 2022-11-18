@@ -1,6 +1,6 @@
 import { useReducer, useEffect } from "react";
 import axios from "axios";
-import {BASE_API_URL} from './BASE_API'
+import {BASE_API_URL} from '../api/BASE_API'
 
 
 const ACTIONS = {

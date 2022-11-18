@@ -1,11 +1,10 @@
 import React from 'react';
 import axios from 'axios';
 import { Container, Row, Col } from 'react-bootstrap'
-import {BASE_API_URL} from './BASE_API'
-import "./App.css";
-import contactsvg from "./character.svg"
+import {BASE_API_URL} from '../api/BASE_API'
+import "../assets/App.css";
+import contactsvg from "../assets/character.svg"
 import styled from "styled-components";
-import "./App.css"
 
 
 const StyledImg = styled.img`
