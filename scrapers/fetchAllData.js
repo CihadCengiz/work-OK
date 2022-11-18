@@ -145,7 +145,7 @@ async function fetchAllData() {
   browser.close();
 
   const client = new Client({
-    connectionString: process.env.DATABASE_URL,
+    connectionString: process.env.DATABASE_URI,
     ssl: {
       rejectUnauthorized: false,
     },
@@ -294,7 +294,7 @@ async function globalFetch() {
 
 
   const client = new Client({
-    connectionString: process.env.DATABASE_URL,
+    connectionString: process.env.DATABASE_URI,
     ssl: {
       rejectUnauthorized: false,
     },
